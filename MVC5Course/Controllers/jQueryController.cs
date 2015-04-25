@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MVC5Course.Controllers
 {
-    public class jQueryController : Controller
+    public class jQueryController : BaseController
     {
         // GET: jQuery
         public ActionResult each()
