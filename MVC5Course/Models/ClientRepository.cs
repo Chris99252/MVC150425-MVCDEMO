@@ -13,7 +13,7 @@ namespace MVC5Course.Models
         }
         public Client Find(int id)
         {
-            return base.All().FirstOrDefault(p => p.ClientId == id);
+            return this.All().FirstOrDefault(p => p.ClientId == id);
         }
 
         public void Detele(Client client)
