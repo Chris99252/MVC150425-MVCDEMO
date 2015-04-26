@@ -412,6 +412,7 @@
     <Content Include="Views\MB\Complex2 - Copy.cshtml" />
     <Content Include="Views\MB\Complex3.cshtml" />
     <Content Include="Views\MB\Complex4.cshtml" />
+    <Content Include="Views\MB\Complex5.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
