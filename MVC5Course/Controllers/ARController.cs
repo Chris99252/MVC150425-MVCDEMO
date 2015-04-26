@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace MVC5Course.Controllers
 {
-    public class ARController : Controller
+    public class ARController : BaseController
     {
         // GET: AR
         public ActionResult Index()
@@ -63,6 +63,19 @@ namespace MVC5Course.Controllers
             return File(content, "image/png", "File5.png");
         }
 
+        public ActionResult JavaScript1()
+        {
+            return JavaScript("alert('JS')");
+        }
+
+        public ActionResult Json1()
+        {
+            db.Configuration.LazyLoadingEnabled = false;
+
+            var data = db.Product.Take(10);
+
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
 
     }
 }
