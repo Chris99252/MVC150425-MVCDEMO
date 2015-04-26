@@ -415,6 +415,7 @@
     <Content Include="Views\MB\Complex4.cshtml" />
     <Content Include="Views\MB\Complex5.cshtml" />
     <Content Include="Views\AF\Error.cshtml" />
+    <Content Include="Views\Shared\Error.Argument.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
