@@ -9,7 +9,14 @@ namespace MVC5Course.Models
     {
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
-            throw new NotImplementedException();
+            if (this.Price > 2000)
+            {
+                yield return new ValidationResult("產品價格不能大於2000元", new[] { "Price" });
+            }
+            if (this.ProductName.ToString().Length < 5)
+            {
+                yield return new ValidationResult("產品名稱長度不能超過5", new[] { "ProductName" });
+            }
         }
     }
     
