@@ -178,6 +178,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AFController.cs" />
     <Compile Include="Controllers\ARController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
@@ -413,6 +414,7 @@
     <Content Include="Views\MB\Complex3.cshtml" />
     <Content Include="Views\MB\Complex4.cshtml" />
     <Content Include="Views\MB\Complex5.cshtml" />
+    <Content Include="Views\AF\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

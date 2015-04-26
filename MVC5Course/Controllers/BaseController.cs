@@ -7,6 +7,10 @@ using System.Web.Mvc;
 
 namespace MVC5Course.Controllers
 {
+
+#if !DEBUG
+    [Authorize]
+#endif
     public abstract class BaseController : Controller
     {
         protected FabricsEntities db = new FabricsEntities();
