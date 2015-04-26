@@ -77,5 +77,35 @@ namespace MVC5Course.Controllers
             return Json(data, JsonRequestBehavior.AllowGet);
         }
 
+        public ActionResult Redirect1()
+        {
+            return RedirectToAction("Index","Home");
+        }
+
+        public ActionResult Redirect2()
+        {
+            return RedirectToActionPermanent("Index", "Home");
+        }
+
+        public ActionResult Redirect3()
+        {
+            return RedirectToAction("File3", new { url = "http://pixelbuddha.net/sites/default/files/freebie-slide/freebie-slide-1426497148-1.jpg" });
+        }
+
+        public ActionResult HttpNotFound1()
+        {
+            //return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            return HttpNotFound();
+        }
+
+        public ActionResult HttpStatusCodeResult1()
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        }
+
+        public ActionResult HttpStatusCodeResult2()
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.Created);
+        }
     }
 }

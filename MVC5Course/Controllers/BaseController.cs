@@ -15,6 +15,8 @@ namespace MVC5Course.Controllers
 
         protected OccupationRepository repoOccupation = RepositoryHelper.GetOccupationRepository();
 
+        protected ProductRepository repoProduct = RepositoryHelper.GetProductRepository();
+
 #if DEBUG
         public ActionResult Debug()
         {
