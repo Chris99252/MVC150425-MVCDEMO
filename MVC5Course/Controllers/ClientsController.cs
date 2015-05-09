@@ -30,10 +30,23 @@ namespace MVC5Course.Controllers
         }
 
         // GET: Clients
-        public ActionResult Index()
+        public ActionResult Index(string city)
         {
             //var client = db.Client.Include(c => c.Occupation).Take(10);
-            var client = repo.All().Take(10);
+            //var client = repo.SelectGender(gender);
+            //var genderList = new List<SelectListItem>();
+
+            //genderList.Add(new SelectListItem() { Value = "M", Text = "男生" });
+            //genderList.Add(new SelectListItem() { Value = "F", Text = "女生" });
+
+            //ViewBag.Genders = new SelectList(genderList, "Value", "Text", gender);
+
+            var client = repo.SelectCity(city);
+
+            var cityList = repo.All().Select(p => new { p.City }).Distinct().ToList();
+
+            ViewBag.Cities = new SelectList(cityList, "City", "City", city);
+
             return View(client.ToList());
         }
 

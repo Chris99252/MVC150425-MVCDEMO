@@ -7,7 +7,9 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink(" ", "Create")*@
+    @*@Html.ActionLink("Create New", "Create")*@
+    @Html.DropDownList("SelectCity", ViewBag.Cities as SelectList, "--請選擇城市名稱--", new { onchange = "location.search = '?city=' + $('#SelectCity').val();" })
 </p>
 <table class="table">
     <tr>
@@ -22,6 +24,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DateOfBirth)
@@ -42,6 +47,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DateOfBirth)

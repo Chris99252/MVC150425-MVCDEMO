@@ -11,6 +11,24 @@ namespace MVC5Course.Models
         {     
             return base.All().Where(p => p.IsDelete == false);
         }
+
+        internal IQueryable<Client> SelectGender(string gender)
+        {
+            return base.All().Where(p => p.Gender == gender && p.IsDelete == false).Take(10);
+        }
+
+        internal IQueryable<Client> SelectCity(string city)
+        {
+            if (String.IsNullOrEmpty(city))
+            {
+                return base.All().Take(10);
+            }
+            else
+            {
+                return base.All().Where(p => p.City == city && p.IsDelete == false).Take(10);
+            }
+        }
+
         public Client Find(int id)
         {
             return this.All().FirstOrDefault(p => p.ClientId == id);
