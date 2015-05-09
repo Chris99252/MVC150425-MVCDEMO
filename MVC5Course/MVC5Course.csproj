@@ -597,6 +597,7 @@
     <Content Include="Views\Shared\OrderOfClient.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Client.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Client.v2.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

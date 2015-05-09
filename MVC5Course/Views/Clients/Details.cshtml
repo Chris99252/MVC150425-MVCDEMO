@@ -10,14 +10,21 @@
     <h4>Client</h4>
     <hr />
 
-    @Html.DisplayForModel()
+    @*@Html.DisplayForModel()*@
+
+    @Html.DisplayFor(model => model)
 
     @*@Html.DisplayForModel("Client.v2")*@
 
     <h4>Client's Order List - Html Action</h4>
+
     @Html.Action("OrderOfClient", "Orders", new { clientId = Model.ClientId })
+
     <h4>Client's Order List - Html Partial</h4>
+
     @Html.Partial("OrderOfClient", Model.Order.ToList())
+
+    @*@Html.DisplayFor(model  => model .Order.ToList(), "OrderOfClient")*@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ClientId }) |
