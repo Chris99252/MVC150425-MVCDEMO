@@ -594,10 +594,12 @@
     <Content Include="Views\View\Index.cshtml" />
     <Content Include="Views\Metro\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.Metro.cshtml" />
-    <Content Include="Views\Shared\OrderOfClient.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Client.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Client.v2.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\OrderOfClient.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\GoogleMaps.cshtml" />
+    <Content Include="Views\CRUD\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
