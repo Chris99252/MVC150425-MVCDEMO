@@ -21,6 +21,16 @@ namespace MVC5Course.Controllers
             return View(order.ToList());
         }
 
+        public ActionResult OrderOfClient(int clientId = 0)
+        {            
+            var order = db.Order.Include(o => o.Client);
+            if (clientId > 0)
+            {
+                order = order.Where(p => p.ClientId == clientId);
+            }
+            return PartialView(order.ToList());
+        }
+
         // GET: Orders/Details/5
         public ActionResult Details(int? id)
         {

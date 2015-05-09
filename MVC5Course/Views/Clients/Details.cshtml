@@ -123,14 +123,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Notes)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Notes)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Occupation.OccupationName)
         </dt>
 
@@ -139,6 +131,10 @@
         </dd>
 
     </dl>
+    <h4>Client's Order List - Html Action</h4>
+    @Html.Action("OrderOfClient", "Orders", new { clientId = Model.ClientId })
+    <h4>Client's Order List - Html Partial</h4>
+    @Html.Partial("OrderOfClient", Model.Order.ToList())
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ClientId }) |
