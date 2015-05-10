@@ -59,7 +59,15 @@
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ClientId }) |
                 @*@Html.ActionLink("Details", "Details", new { id = item.ClientId }) |*@
-                @Ajax.ActionLink("Details", "Details", new { id = item.ClientId }, new AjaxOptions { UpdateTargetId = "detail" })
+                @Ajax.ActionLink("Details", "Details", new { id = item.ClientId }, new AjaxOptions
+                {
+                    UpdateTargetId = "detail",
+                    Confirm = "是否要載入詳細資料",
+                    HttpMethod = "POST",
+                    InsertionMode = InsertionMode.InsertAfter,
+                    LoadingElementId = "loading",
+                    AllowCache = false
+                })
                 @Html.ActionLink("Delete", "Delete", new { id = item.ClientId })
             </td>
         </tr>
@@ -67,8 +75,12 @@
 
 </table>
 
+<div id="loading" style="display:none">
+    <img src="http://www.ajaxload.info/cache/FF/FF/FF/00/00/00/5-0.gif" /> 
+</div>
+
 <div id="detail">
-       
+    尚未載入
 </div>
 
 @section scripts{
