@@ -14,18 +14,18 @@ namespace MVC5Course.Models
 
         internal IQueryable<Client> SelectGender(string gender)
         {
-            return base.All().Where(p => p.Gender == gender && p.IsDelete == false).Take(10);
+            return base.All().Where(p => p.Gender == gender && p.IsDelete == false);
         }
 
         internal IQueryable<Client> SelectCity(string city)
         {
             if (String.IsNullOrEmpty(city))
             {
-                return base.All().Take(10);
+                return base.All().OrderBy(p => p.ClientId);
             }
             else
             {
-                return base.All().Where(p => p.City == city && p.IsDelete == false).Take(10);
+                return base.All().Where(p => p.City == city && p.IsDelete == false).OrderBy(p => p.ClientId);
             }
         }
 
