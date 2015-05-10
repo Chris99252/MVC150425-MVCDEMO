@@ -196,6 +196,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AFController.cs" />
+    <Compile Include="Controllers\AjaxController.cs" />
     <Compile Include="Controllers\ARController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
@@ -507,7 +508,6 @@
     <None Include="Scripts\jquery-1.11.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.2.js" />
     <Content Include="Scripts\jquery-1.11.2.min.js" />
-    <Content Include="Scripts\jquery-1.11.2.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
@@ -600,6 +600,7 @@
     <Content Include="Views\Shared\OrderOfClient.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\GoogleMaps.cshtml" />
     <Content Include="Views\CRUD\_ViewStart.cshtml" />
+    <Content Include="Views\Ajax\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
